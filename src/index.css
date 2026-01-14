@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange: #FF8C60;
+  --brand-dark: #0A1045;
+  --brand-gray: #67697C;
+  --brand-light: #F9FAFB;
+}
+
+@layer utilities {
+  .text-brand-orange { color: var(--brand-orange); }
+  .bg-brand-orange { background-color: var(--brand-orange); }
+  .border-brand-orange { border-color: var(--brand-orange); }
+  
+  .text-brand-dark { color: var(--brand-dark); }
+  .bg-brand-dark { background-color: var(--brand-dark); }
+  .border-brand-dark { border-color: var(--brand-dark); }
+  
+  .text-brand-gray { color: var(--brand-gray); }
+  .bg-brand-gray { background-color: var(--brand-gray); }
+  
+  .bg-brand-light { background-color: var(--brand-light); }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+  .animate-marquee2 {
+    animation: marquee2 25s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
